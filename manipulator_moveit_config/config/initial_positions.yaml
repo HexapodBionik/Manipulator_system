@@ -1,0 +1,9 @@
+# Default initial positions for manipulator_assembly_to_URDF_v2's ros2_control fake system
+
+initial_positions:
+  joint_1: 0
+  joint_2: 0
+  joint_3: 0
+  joint_4: 0
+  lf_joint: 0
+  rf_joint: 0

@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="manipulator_assembly_to_URDF_v2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0789173614759228 0.0365054375538782 0.000146943372671578"
+        rpy="0 0 0" />
+      <mass
+        value="0.803055334573091" />
+      <inertia
+        ixx="0.00058252083724049"
+        ixy="5.91238997535074E-06"
+        ixz="2.22761804402797E-06"
+        iyy="0.0012074631537419"
+        iyz="3.76810492624628E-07"
+        izz="0.00158848602901175" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.549019607843137 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="0.00584957744329572 4.50291616769585E-05 0.0298263419760327"
+        rpy="0 0 0" />
+      <mass
+        value="1.29634781607792" />
+      <inertia
+        ixx="0.000364644624121157"
+        ixy="6.10818275959069E-07"
+        ixz="5.44707780658458E-06"
+        iyy="0.00057710623926429"
+        iyz="4.46425764716742E-07"
+        izz="0.000606404758522164" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_description/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_description/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="0.0624692345713514 -0.000212499756336727 -0.00438389058830384"
+        rpy="0 0 0" />
+      <mass
+        value="0.656682402619019" />
+      <inertia
+        ixx="0.000302558003494536"
+        ixy="-4.52379082874761E-08"
+        ixz="4.70265576996236E-05"
+        iyy="0.000505085462003595"
+        iyz="-5.3371760088461E-08"
+        izz="0.000395081060861996" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_description/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_description/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="continuous">
+    <origin
+      xyz="-0.00025 -0.0015763 0.030821"
+      rpy="-3.1416 -1.5702 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="0.0595640388374039 -0.000801493795255848 -0.00158564852414744"
+        rpy="0 0 0" />
+      <mass
+        value="0.090555203298826" />
+      <inertia
+        ixx="8.42452666533343E-05"
+        ixy="8.38734067730732E-07"
+        ixz="-6.30767901595749E-06"
+        iyy="0.000435612309074478"
+        iyz="-6.7312341062182E-07"
+        izz="0.000393286765843842" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_description/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_description/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="continuous">
+    <origin
+      xyz="0.17296 0 0.00014863"
+      rpy="0.00058608 0 1.5708" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="gripper">
+    <inertial>
+      <origin
+        xyz="-0.000963725610493814 0.00867649640617191 0.0259025975632264"
+        rpy="0 0 0" />
+      <mass
+        value="0.0296543051300522" />
+      <inertia
+        ixx="4.7474489759306E-06"
+        ixy="-3.61101084319972E-09"
+        ixz="9.76002957092922E-10"
+        iyy="7.05174610923127E-06"
+        iyz="8.72386839008527E-08"
+        izz="4.14902836862368E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_description/meshes/gripper.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.549019607843137 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_description/meshes/gripper.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="continuous">
+    <origin
+      xyz="0.2032 0 0"
+      rpy="3.14 -1.5708 0" />
+    <parent
+      link="link_3" />
+    <child
+      link="gripper" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left_finger">
+    <inertial>
+      <origin
+        xyz="0 -0.00168229070355719 -0.00889168009611271"
+        rpy="0 0 0" />
+      <mass
+        value="0.00362258079755188" />
+      <inertia
+        ixx="8.58500861755857E-07"
+        ixy="-4.30692005937536E-22"
+        ixz="-5.84151267204439E-22"
+        iyy="6.03746320698698E-07"
+        iyz="-3.66667120365105E-07"
+        izz="3.41098994017298E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_description/meshes/left_finger.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.549019607843137 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_description/meshes/left_finger.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lf_joint"
+    type="prismatic">
+    <origin
+      xyz="0.032331 0 0.076026"
+      rpy="0.78114 0 -1.5708" />
+    <parent
+      link="gripper" />
+    <child
+      link="left_finger" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.055"
+      effort="1000"
+      velocity="1" />
+  </joint>
+  <link
+    name="right_finger">
+    <inertial>
+      <origin
+        xyz="0 0.00159783947927411 -0.00890724345358063"
+        rpy="0 0 0" />
+      <mass
+        value="0.00362258079755187" />
+      <inertia
+        ixx="8.58500861755855E-07"
+        ixy="-1.88135082166572E-23"
+        ixz="6.61061167921008E-23"
+        iyy="6.10681157654909E-07"
+        iyz="3.64108869441144E-07"
+        izz="3.34164157061085E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_description/meshes/right_finger.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.549019607843137 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator_description/meshes/right_finger.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rf_joint"
+    type="prismatic">
+    <origin
+      xyz="-0.030888 0 0.075969"
+      rpy="-0.78257 0 -1.5708" />
+    <parent
+      link="gripper" />
+    <child
+      link="right_finger" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0.055"
+      effort="1000"
+      velocity="1" />
+  </joint>
+</robot>
