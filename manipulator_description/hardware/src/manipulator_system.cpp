@@ -31,10 +31,13 @@ CallbackReturn ManipulatorSystem::on_deactivate(const rclcpp_lifecycle::State &)
 std::vector<hardware_interface::StateInterface> ManipulatorSystem::export_state_interfaces()
 {
   std::vector<hardware_interface::StateInterface> state;
-  for (size_t i = 0; i < NUM_JOINTS; ++i)
+  for (size_t i = 0; i < NUM_JOINTS; ++i) {
     state.emplace_back(joint_names_[i], hardware_interface::HW_IF_POSITION, &pos_[i]);
+    state.emplace_back(joint_names_[i], hardware_interface::HW_IF_VELOCITY, &vel_[i]);
+  }
   return state;
 }
+
 
 std::vector<hardware_interface::CommandInterface> ManipulatorSystem::export_command_interfaces()
 {

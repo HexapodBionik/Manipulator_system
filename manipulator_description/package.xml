@@ -12,7 +12,17 @@
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 
+  <build_depend>rclcpp</build_depend>
+  <build_depend>pluginlib</build_depend>
+  <build_depend>hardware_interface</build_depend>
+
+  <exec_depend>rclcpp</exec_depend>
+  <exec_depend>pluginlib</exec_depend>
+  <exec_depend>hardware_interface</exec_depend>
+
+
   <export>
     <build_type>ament_cmake</build_type>
+    <pluginlib plugin="${prefix}/manipulator_hw_plugins.xml"/>
   </export>
 </package>

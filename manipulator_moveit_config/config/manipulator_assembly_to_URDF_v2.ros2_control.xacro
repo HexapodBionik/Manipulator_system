@@ -6,7 +6,10 @@
         <ros2_control name="${name}" type="system">
             <hardware>
                 <!-- By default, set up controllers for simulation. This won't work on real hardware -->
-                <plugin>mock_components/GenericSystem</plugin>
+                <!-- <plugin>mock_components/GenericSystem</plugin> -->
+                <plugin>manipulator_hw/ManipulatorSystem</plugin>
+                <param name="port" value="/dev/ttyAMA0"/>
+                <param name="baud_rate" value="115200"/>
             </hardware>
             <joint name="joint_1">
                 <command_interface name="position"/>

@@ -31,4 +31,38 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+
+find_package(rclcpp REQUIRED)
+find_package(pluginlib REQUIRED)
+find_package(hardware_interface REQUIRED)
+
+add_library(manipulator_hw SHARED
+  hardware/src/manipulator_system.cpp
+)
+target_include_directories(manipulator_hw PUBLIC
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/hardware/include>
+  $<INSTALL_INTERFACE:include>
+)
+ament_target_dependencies(manipulator_hw
+  rclcpp
+  pluginlib
+  hardware_interface
+)
+target_compile_features(manipulator_hw PUBLIC cxx_std_17)
+
+pluginlib_export_plugin_description_file(hardware_interface manipulator_hw_plugins.xml)
+
+install(TARGETS manipulator_hw
+  LIBRARY DESTINATION lib
+)
+
+install(DIRECTORY hardware/include/
+  DESTINATION include
+)
+
+install(FILES manipulator_hw_plugins.xml
+  DESTINATION share/${PROJECT_NAME}
+)
+
+
 ament_package()
