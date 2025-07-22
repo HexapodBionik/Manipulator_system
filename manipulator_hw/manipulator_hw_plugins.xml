@@ -1,7 +1,0 @@
-<library path="libmanipulator_hw">
-  <class name="manipulator_hw/ManipulatorSystem"
-         type="manipulator_hw::ManipulatorSystem"
-         base_class_type="hardware_interface::SystemInterface">
-    <description>Manipulator hardware interface system</description>
-  </class>
-</library>
