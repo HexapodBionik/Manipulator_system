@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>manipulator_control</name>
+  <version>0.2.0</version>
+  <description>CLI sterowanie 4 DOF + chwytak (1-2 palce) przez MoveIt 2</description>
+  <maintainer email="you@example.com">Your Name</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>moveit_ros_planning_interface</depend>
+  <depend>yaml-cpp</depend>
+  <depend>ament_index_cpp</depend>
+
+  <exec_depend>ros2launch</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

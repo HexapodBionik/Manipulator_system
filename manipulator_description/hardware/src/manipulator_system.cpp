@@ -96,11 +96,12 @@ return_type ManipulatorSystem::read(const rclcpp::Time &, const rclcpp::Duration
         int g;
 
         if (ss >> j1 >> j2 >> j3 >> g) {
-          RCLCPP_INFO(rclcpp::get_logger("ManipulatorSystem"), 
-                      "Received: j1=%.3f j2=%.3f j3=%.3f g=%d",
-                      j1, j2, j3, g);
+          // RCLCPP_INFO(rclcpp::get_logger("ManipulatorSystem"), 
+                      // "Received: j1=%.3f j2=%.3f j3=%.3f g=%d",
+                      // j1, j2, j3, g);
 
-        pos_[0]=j1; pos_[1]=j2; pos_[2]=j3;
+        // pos_[0]=j1; pos_[1]=j2; pos_[2]=j3;
+        pos_[0]=cmd_[0]; pos_[1]=cmd_[1]; pos_[2]=cmd_[2];
         pos_[3]=cmd_[3];
         pos_[4]=pos_[5]=cmd_[4];
         }
@@ -109,7 +110,7 @@ return_type ManipulatorSystem::read(const rclcpp::Time &, const rclcpp::Duration
       }
     }
   } else {
-    RCLCPP_WARN(rclcpp::get_logger("ManipulatorSystem"), "No data from serial - injecting dummy values");
+    // RCLCPP_WARN(rclcpp::get_logger("ManipulatorSystem"), "No data from serial - injecting dummy values");
     for (size_t i = 0; i < NUM_JOINTS; ++i) {
       pos_[i] = cmd_[i];
       vel_[i] = 0.0;
@@ -123,7 +124,9 @@ return_type ManipulatorSystem::read(const rclcpp::Time &, const rclcpp::Duration
 return_type ManipulatorSystem::write(const rclcpp::Time &, const rclcpp::Duration &)
 {
   char out[128];
-  int gripper_state = 0; 
+  int gripper_state; 
+
+  if (cmd_[4] > 0.001) gripper_state = 1; else gripper_state = 0;
 
   snprintf(out, sizeof(out), "<%.3f,%.3f,%.3f,%.3f,%d>", 
            cmd_[0], cmd_[1], cmd_[2], cmd_[3], gripper_state);

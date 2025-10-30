@@ -26,6 +26,7 @@ private:
   static constexpr size_t NUM_JOINTS = 6;
   std::array<double, NUM_JOINTS> pos_{};
   std::array<double, NUM_JOINTS> vel_{};
+  std::array<double, NUM_JOINTS> effort_{};
   std::array<double, NUM_JOINTS> cmd_{};
   std::array<std::string, NUM_JOINTS> joint_names_{};
   int fd_ = -1;
