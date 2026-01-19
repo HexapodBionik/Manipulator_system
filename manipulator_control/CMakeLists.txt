@@ -32,5 +32,16 @@ target_link_libraries(manipulator_control yaml-cpp)
 install(TARGETS manipulator_control
   RUNTIME DESTINATION lib/${PROJECT_NAME})
 
+add_executable(pick_and_place src/pick_and_place.cpp)
+ament_target_dependencies(pick_and_place
+  rclcpp
+  moveit_ros_planning_interface
+  ament_index_cpp
+)
+target_link_libraries(pick_and_place yaml-cpp)
+install(TARGETS pick_and_place
+  RUNTIME DESTINATION lib/${PROJECT_NAME})
+
+
 
 ament_package()
