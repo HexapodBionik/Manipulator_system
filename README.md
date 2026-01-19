@@ -8,32 +8,35 @@ It includes MoveIt integration, pick-and-place functionality, and teleoperation.
 - ROS 2 Jazzy (required)
 - Linux system compatible with ROS 2 Jazzy
 
-Make sure your ROS 2 environment is sourced:
+#### Make sure your ROS 2 environment is sourced:
 
 source /opt/ros/jazzy/setup.bash
 
 ## Build the Workspace
 
 cd manipulator_ws
+
 colcon build
+
 source install/setup.bash
 
 ## Running the System (MoveIt Demo)
 
-Launch the MoveIt configuration and simulation:
+#### Launch the MoveIt configuration and simulation:
 
-cd manipulator_ws/
+cd manipulator_ws/ 
+
 ros2 launch manipulator_moveit_config demo.launch.py
 
 ## Pick and Place
 
-Run the pick-and-place example:
+#### Run the pick-and-place example:
 
 ros2 run manipulator_control pick_and_place
 
 ## Teleoperation
 
-Start teleoperation using MoveIt:
+#### Start teleoperation using MoveIt:
 
 ros2 run manipulator_control teleop_moveit_node
 
