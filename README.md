@@ -7,6 +7,18 @@ It includes MoveIt integration, pick-and-place functionality, and teleoperation.
 
 - ROS 2 Jazzy (required)
 - Linux system compatible with ROS 2 Jazzy
+- MoveIt
+- ros2_control
+#### Install MoveIt 2 and ros2_control
+
+```bash
+sudo apt update
+sudo apt install ros-jazzy-moveit
+sudo apt install \
+  ros-jazzy-ros2-control \
+  ros-jazzy-ros2-controllers \
+  ros-jazzy-controller-manager
+```
 
 #### Make sure your ROS 2 environment is sourced:
 
